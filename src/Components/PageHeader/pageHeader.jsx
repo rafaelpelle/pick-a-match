@@ -3,8 +3,8 @@ import { Container, Image } from 'semantic-ui-react'
 import UEFA_Ball from '../../images/UEFA_Ball.png'
 import UEFA_Logo from '../../images/UEFA_Logo.png'
 
-const ballStyle = { padding: '2em 5em' }
-const logoStyle = { paddingBottom: '2em', paddingLeft: '1em', paddingRight: '1em' }
+const ballStyle = { padding: '0em 5em' }
+const logoStyle = { padding: '2em 1em' }
 
 class PageHeader extends React.Component {
 	render() {

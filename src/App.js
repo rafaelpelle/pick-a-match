@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
-import PageHeader from './Components/PageHeader/pageHeader'
 import MobileSidebar from './Components/MobileSidebar/mobileSidebar'
+import PageHeader from './Components/PageHeader/pageHeader'
+import PickMatchButton from './Components/PickMatchButton/pickMatchButton'
 import './App.css'
+
 
 class App extends Component {
   render() {
@@ -10,6 +12,7 @@ class App extends Component {
     	<Container className="App" >
 			<MobileSidebar >
 				<PageHeader />
+				<PickMatchButton />
 			</MobileSidebar>
 		</Container>
     )
