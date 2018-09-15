@@ -4,12 +4,11 @@
     margin: 0;
     width: 100vw !important;
     height: 100vh !important;
-    background-image: linear-gradient(to bottom right, #222c69, #9a214c);
+    background-image: linear-gradient(to bottom right, #000428, #031F73);
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 100px;
 }
 
 .App-logo-container {
