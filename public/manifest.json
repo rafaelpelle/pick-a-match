@@ -1,11 +1,11 @@
 {
   "short_name": "Pick-A-Match",
   "name": "Pick-A-Match",
-  "start_url": "./",
+  "start_url": "./index.html",
   "orientation": "portrait",
   "display": "standalone",
-  "theme_color": "#1b1c1d",
-  "background_color": "#1b1c1d",
+  "theme_color": "#000428",
+  "background_color": "#000428",
   "icons": [
     {
       "src": "favicon.ico",

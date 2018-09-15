@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     width: 100vw !important;
-    height: 100vh !important;
+    min-height: 100vh !important;
     background-image: linear-gradient(to bottom right, #000428, #031F73);
 }
 
