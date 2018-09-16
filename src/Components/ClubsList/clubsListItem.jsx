@@ -1,20 +1,33 @@
 import React from 'react'
-import {Grid, Header, Image} from 'semantic-ui-react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { Checkbox, Grid, Header, Image } from 'semantic-ui-react'
+
+const headerStyle = { marginTop: '0.5em' }
 
 class ClubsListItem extends React.Component {
-	render() {
-		const { name, fullName, image } = this.props.club
-		return (
-			<Grid >
-				<Grid.Column textAlign='left' >
-					<Image src={image} inline />
-					<Header content={fullName} />
-				</Grid.Column>
-				<Grid.Column textAlign='right' >
 
+	handleChange = (e, { value }) => {
+
+	}
+
+	render() {
+		const { club, toggleList } = this.props
+		const { name, fullName, image } = club
+		const isEnabled = toggleList[name]
+		return (
+			<Grid verticalAlign='middle' >
+				<Grid.Column width={ 10 } textAlign='center' >
+					<Image src={image} inline size='mini' />
+					<Header content={fullName} inverted size='tiny' style={ headerStyle } />
+				</Grid.Column>
+				<Grid.Column width={ 6 } textAlign='right' >
+					<Checkbox toggle checked={ isEnabled } onChange={ this.handleChange } />
 				</Grid.Column>
 			</Grid>
 		)
 	}
 }
-export default ClubsListItem
+const mapStateToProps = (state) => ({ toggleList: state.clubs })
+const mapDispatchToProps = (dispatch) => bindActionCreators({ }, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(ClubsListItem)

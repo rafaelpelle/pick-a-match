@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Icon, Menu, Responsive, Segment, Sidebar } from 'semantic-ui-react'
+import ClubsList from "../ClubsList/clubsList";
 
 
 class MobileSibebar extends Component {
@@ -19,6 +20,7 @@ class MobileSibebar extends Component {
 			<Responsive >
 				<Sidebar.Pushable>
 					<Sidebar as={Menu} animation='push' vertical visible={sidebarOpened} style={{paddingTop: '2em', backgroundColor: 'transparent'}}>
+						<ClubsList />
 					</Sidebar>
 
 					<Sidebar.Pusher
