@@ -6,10 +6,6 @@ import ClubsListItem from './clubsListItem'
 const headerStyle = { marginTop: '0em', marginBottom: '1em' }
 
 class ClubsList extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
 	renderClubs = () => {
 		const clubsList = clubs
 		return clubsList.map((club, i) => {
