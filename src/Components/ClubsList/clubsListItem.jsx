@@ -2,13 +2,20 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Checkbox, Grid, Header, Image } from 'semantic-ui-react'
+import { enableClub, disableClub } from './clubsListActions'
 
 const headerStyle = { marginTop: '0.5em' }
 
 class ClubsListItem extends React.Component {
 
-	handleChange = (e, { value }) => {
-
+	handleChange = (e, data) => {
+		const { enableClub, disableClub, club } = this.props
+		const { name } = club
+		if (data.checked) {
+			enableClub(name)
+		} else {
+			disableClub(name)
+		}
 	}
 
 	render() {
@@ -29,5 +36,5 @@ class ClubsListItem extends React.Component {
 	}
 }
 const mapStateToProps = (state) => ({ toggleList: state.clubs })
-const mapDispatchToProps = (dispatch) => bindActionCreators({ }, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({ enableClub, disableClub }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ClubsListItem)

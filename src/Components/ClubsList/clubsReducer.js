@@ -15,9 +15,9 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'enableClub':
+		case 'CLUB_ENABLED':
 			return { ...state, [action.payload]: true }
-		case 'disableClub':
+		case 'CLUB_DISABLED':
 			return { ...state, [action.payload]: false }
 		default:
 			return state
