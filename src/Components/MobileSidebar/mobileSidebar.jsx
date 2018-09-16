@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Icon, Menu, Responsive, Segment, Sidebar } from 'semantic-ui-react'
-import ClubsList from "../ClubsList/clubsList";
+import ClubsList from '../ClubsList/clubsList'
 
 
 class MobileSibebar extends Component {

@@ -11,6 +11,7 @@ const INITIAL_STATE = {
 	mCity: true,
 	bayern: false,
 	borussia: true,
+	equalClubs: true,
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -19,6 +20,8 @@ export default (state = INITIAL_STATE, action) => {
 			return { ...state, [action.payload]: true }
 		case 'CLUB_DISABLED':
 			return { ...state, [action.payload]: false }
+		case 'SET_EQUAL_VALUE':
+			return { ...state, equalClubs: action.payload }
 		default:
 			return state
 	}
