@@ -7,8 +7,7 @@ const headerStyle = { marginTop: '0em', marginBottom: '1em' }
 
 class ClubsList extends React.Component {
 	renderClubs = () => {
-		const clubsList = clubs
-		return clubsList.map((club, i) => {
+		return clubs.map((club, i) => {
 			return(<ClubsListItem club={ club } key={ i } />)
 		})
 	}
@@ -16,7 +15,7 @@ class ClubsList extends React.Component {
 	render() {
 		return (
 			<Segment basic style={ { padding: '0em 1em' } } >
-				<Header as='h3' content='Selecionar clubes' textAlign='center' style={ headerStyle } inverted />
+				<Header as='h2' content='Selecionar Clubes' textAlign='center' style={ headerStyle } inverted />
 				{ this.renderClubs() }
 			</Segment>
 		)
