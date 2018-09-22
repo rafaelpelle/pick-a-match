@@ -160,7 +160,7 @@
   left @sliderTransitionDuration @defaultEasing
 ;
 
-@toggleLaneBackground: @veryStrongTransparentBlack;
+@toggleLaneBackground: @transparentBlack;
 @toggleLaneHeight: @toggleHandleSize;
 @toggleLaneBoxShadow: none;
 @toggleLaneVerticalOffset: 0rem;
@@ -179,11 +179,11 @@
 @toggleOffHandleBoxShadow: @handleBoxShadow;
 
 @toggleOnLabelColor: @selectedTextColor;
-@toggleOnLaneColor: #79cbb5;
+@toggleOnLaneColor: @primaryColor;
 
 @toggleOnHandleBoxShadow: @handleBoxShadow;
 
-@toggleOnFocusLaneColor: #79cbb5;
+@toggleOnFocusLaneColor: @primaryColorFocus;
 @toggleOnFocusLabelColor: @toggleOnLabelColor;
 
 

@@ -16,6 +16,8 @@ class PickMatchButton extends Component {
 		return clubs.filter(club => {
 			if (toggleList[club.name]) {
 				return club
+			} else {
+				return undefined
 			}
 		})
 	}
@@ -36,7 +38,6 @@ class PickMatchButton extends Component {
 
 	handleClick = () => {
 		let selectedClubs = this.filterClubs()
-		console.log(selectedClubs)
 		const player1Club = selectedClubs[this.getRandomNumber(selectedClubs.length)]
 		const { equalClubsAllowed, setPlayer1Club, setPlayer2Club } = this.props
 		if (!equalClubsAllowed) {
