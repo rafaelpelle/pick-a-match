@@ -1,10 +1,11 @@
 import React from 'react'
 import connect from 'react-redux/es/connect/connect'
 import { bindActionCreators } from 'redux'
-import { Header, Image, Segment, Transition } from 'semantic-ui-react'
+import {Divider, Header, Image, Segment, Transition} from 'semantic-ui-react'
 import { history } from '../../Utils/history'
 
-const padding2 = { padding: '2em' }
+const verticalPadding = { padding: '2em 0em' }
+const noPadding = { padding: '0em' }
 
 class ResultPage extends React.Component {
 	constructor(props) {
@@ -23,18 +24,19 @@ class ResultPage extends React.Component {
 		const { player1Club, player2Club } = this.props
 		if (player1Club && player2Club) {
 			return (
-				<Segment basic textAlign='center'>
+				<Segment basic textAlign='center' verticalAlign='middle' style={ {...noPadding, height: '100vh'} }>
 					<Transition visible={ visible } animation='fly right' duration={ 1000 } >
-						<Segment basic style={ padding2 }>
-							<Header content='Player 1' inverted/>
-							<Image src={ player1Club.image } inline size='small' />
+						<Segment basic style={ {...verticalPadding, height: '46vh'} }>
+							<Header as='h2' content='Player 1' inverted />
+							<Image src={ player1Club.image } inline size='small' style={ {padding: '1em'} } />
 							<Header content={ player1Club.fullName } inverted/>
 						</Segment>
 					</Transition>
+					<Divider inverted style={{ margin: '0' }} />
 					<Transition visible={ visible } animation='fly left' duration={ 1000 } >
-						<Segment basic style={ padding2 }>
-							<Header content='Player 2' inverted/>
-							<Image src={ player2Club.image } inline size='small' />
+						<Segment basic style={ {...verticalPadding, height: '50vh'} }>
+							<Header as='h2' content='Player 2' inverted/>
+							<Image src={ player2Club.image } inline size='small' style={ {padding: '1em'} } />
 							<Header content={ player2Club.fullName } inverted/>
 						</Segment>
 					</Transition>
