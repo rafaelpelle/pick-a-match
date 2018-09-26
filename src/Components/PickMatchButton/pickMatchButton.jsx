@@ -1,9 +1,10 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
-import {Button} from 'semantic-ui-react'
-import {clubs} from '../../Utils/clubs'
-import {setPlayer1Club, setPlayer2Club} from '../ClubsList/clubsListActions'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { Button } from 'semantic-ui-react'
+import { history } from '../../Utils/history'
+import { clubs } from '../../Utils/clubs'
+import { setPlayer1Club, setPlayer2Club } from '../ClubsList/clubsListActions'
 
 const buttonStyle = {
 	borderRadius: '100px',
@@ -47,6 +48,7 @@ class PickMatchButton extends Component {
 		const player2Club = selectedClubs[player2RandomNumber]
 		setPlayer1Club(player1Club)
 		setPlayer2Club(player2Club)
+		history.push('/result')
 	}
 
 	render() {

@@ -21,6 +21,7 @@
     to { transform: rotate(360deg); }
 }
 
+
 @keyframes App-logo-move {
     from { left: 0; }
     to { left: 80vw; }

@@ -3,6 +3,7 @@ import { Container } from 'semantic-ui-react'
 import { Router, Switch, Route } from 'react-router-dom'
 import { history } from '../Utils/history'
 import HomePage from '../Pages/HomePage/homePage'
+import ResultPage from '../Pages/ResultPage/resultPage'
 import './App.css'
 
 
@@ -22,6 +23,7 @@ class App extends Component {
 				<Router history={ history } >
 					<Switch>
 						<Route exact={true} path='/' component={HomePage}/>
+						<Route exact={true} path='/result' component={ResultPage}/>
 					</Switch>
 				</Router>
 			</Container>
