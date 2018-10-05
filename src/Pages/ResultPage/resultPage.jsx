@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Segment } from 'semantic-ui-react'
 import { history } from '../../Utils/history'
 import ResultClub from '../../Components/ResultClub/resultClub'
+import ReturnButton from '../../Components/ReturnButton/returnButton'
 
 const noPadding = { padding: '0em' }
 const pageStyle = {...noPadding, height: '100vh'}
@@ -26,6 +27,7 @@ class ResultPage extends React.Component {
 		if (player1Club && player2Club) {
 			return (
 				<Segment basic textAlign='center' verticalAlign='middle' style={ pageStyle }>
+					<ReturnButton />
 					<ResultClub club={ player1Club } player='Player 1' visible={ visible } animation='fly right' />
 					<ResultClub club={ player2Club } player='Player 2' visible={ visible } animation='fly left' />
 				</Segment>
