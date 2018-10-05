@@ -1,13 +1,13 @@
 import React from 'react'
 import connect from 'react-redux/es/connect/connect'
 import { bindActionCreators } from 'redux'
-import { Segment } from 'semantic-ui-react'
+import { Divider, Segment } from 'semantic-ui-react'
 import { history } from '../../Utils/history'
 import ResultClub from '../../Components/ResultClub/resultClub'
 import ReturnButton from '../../Components/ReturnButton/returnButton'
 
 const noPadding = { padding: '0em' }
-const pageStyle = {...noPadding, height: '100vh'}
+const pageStyle = { ...noPadding }
 
 class ResultPage extends React.Component {
 	constructor(props) {
@@ -29,6 +29,7 @@ class ResultPage extends React.Component {
 				<Segment basic textAlign='center' verticalAlign='middle' style={ pageStyle }>
 					<ReturnButton />
 					<ResultClub club={ player1Club } player='Player 1' visible={ visible } animation='fly right' />
+					<Divider inverted />
 					<ResultClub club={ player2Club } player='Player 2' visible={ visible } animation='fly left' />
 				</Segment>
 			)
